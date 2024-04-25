@@ -51,8 +51,8 @@ class _CalculatorScreenState extends State<CalculatorScreen> {
         if (_expression.isNotEmpty) {
           try {
             final result = CalculatorLogic.evaluateExpression(_expression);
-            _expression = formatResult(result); // Отображаем результат на экране
             _saveCalculationToHistory(_expression, result.toString()); // Сохраняем вычисление в историю
+            _expression = formatResult(result); // Отображаем результат на экране
             _isResult = true;
           } catch (e) {
             _expression = 'Error';
